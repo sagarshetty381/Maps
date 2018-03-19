@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/snippet_top_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topbar">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="50"
+            android:padding="2dp"/>
+
+        <EditText
+            android:id="@+id/etdescription"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="Description"
+            android:layout_weight="10"/>
+
+        <EditText
+            android:id="@+id/latitude"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"/>
+
+        <EditText
+            android:id="@+id/longitude"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"/>
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:hint="City"
+            android:layout_weight="15"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+            <Button
+                android:id="@+id/getLL"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="get Lati/long"
+                tools:layout_editor_absoluteX="39dp"
+                tools:layout_editor_absoluteY="28dp"
+                tools:ignore="MissingConstraints"
+                android:layout_weight="50"
+                android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/takephoto"
+                android:padding="10dp"
+                android:text="@string/take_photo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/linear"
+                android:layout_gravity="center"
+                android:layout_weight="50"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
